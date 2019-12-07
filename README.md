@@ -5,7 +5,7 @@ HyperFlow Docker image contains Montage binaries and HyperFlow job executor
 - `make` -- build the container and push to Docker Hub
 - `make container` -- builds the container
 
-## Running
+## Running locally
 
 You can use three prepared zip packages with Montage workflow graphs and input data:
 - Montage 0.25 (43 tasks) (16 MB)
@@ -24,3 +24,4 @@ hflow run .
 ```
 All files, including the final `jpeg`, will be generated in the `work_dir`. Please note the step where `input` directory is copied to a temporary `work_dir` -- this is for convenience, you can simply set the `HF_VAR_WORK_DIR` to `input` (but it will be populated with lots of intermediate files).
 
+## Running in a Kubernetes cluster

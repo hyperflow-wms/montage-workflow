@@ -25,3 +25,9 @@ hflow run .
 All files, including the final `jpeg`, will be generated in the `work_dir`. Please note the step where `input` directory is copied to a temporary `work_dir` -- this is for convenience, you can simply set the `HF_VAR_WORK_DIR` to `input` (but it will be populated with lots of intermediate files).
 
 ## Running in a Kubernetes cluster
+
+On the container where the HyperFlow engine is running, define the following environment variable:
+```
+HF_VAR_function="k8sCommand"
+```
+TODO

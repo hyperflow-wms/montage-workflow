@@ -8,9 +8,9 @@ HyperFlow Docker image contains Montage binaries and HyperFlow job executor
 ## Running locally
 
 You can use three prepared zip packages with Montage workflow graphs and input data:
-- Montage 0.25 (43 tasks) ([16 MB](https://docs.google.com/uc?export=download&id=1JWzN2wUJEDyZRTpGrYFYLzhUE6HgXBms))
-- Montage 1.0 (469 tasks) ([146 MB](https://docs.google.com/uc?export=download&id=1PV92Q7gcolMK58evwlXeO7lKHgKKIcgy))
-- Montage 2.0 (1482 tasks) ([459 MB](https://docs.google.com/uc?export=download&id=1SbzN_KVE-xXXEgqW_z21pTYykx9VFtv6))
+- Montage 0.25 (43 tasks) ([16 MB](https://docs.google.com/uc?export=download&id=139Mia8gXX-LmjgnJlvSR6ndeaMXoFS7z))
+- Montage 1.0 (469 tasks) ([146 MB](https://docs.google.com/uc?export=download&id=1fEX2vPVWJfjuVvmtQ-ZAQuBUL4GP18FS))
+- Montage 2.0 (1482 tasks) ([459 MB](https://docs.google.com/uc?export=download&id=1MUxIx-uDtHcXEMU39ixqfi8peWkw1OGy))
 
 To run the workflow locally using the `montage-worker` Docker image, you need to have HyperFlow installed and the Redis server running. Then unzip the chosen zip archive and run commands:
 

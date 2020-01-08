@@ -1,10 +1,12 @@
+SHELL := /bin/bash
+
 ifndef WORKFLOW_DIR
 $(error WORKFLOW_DIR is not set. Example, make push WORKFLOW_DIR=montage0.25)
 endif
 
-ifndef WROKFLOW_DEGREE
-$(info Using default WROKFLOW_DEGREE=0.25)
-DATA_SAMPLE_SIZE = 0.25
+ifndef WORKFLOW_DEGREE
+$(info Using default WORKFLOW_DEGREE=0.25)
+WORKFLOW_DEGREE = 0.25
 endif
 
 ifndef NUMBER_OF_TASKS
@@ -35,7 +37,7 @@ images: image-workflow-data
 image-workflow-data:
 	echo "*" > .dockerignore
 	echo "!$(WORKFLOW_DIR)" >> .dockerignore
-	docker build --squash --build-arg WORKFLOW_DIR=$(WORKFLOW_DIR) --build-arg WROKFLOW_DEGREE=$(WROKFLOW_DEGREE) --build-arg NUMBER_OF_TASKS=$(NUMBER_OF_TASKS) -t $(DATA_LATEST) . # Build new image and automatically tag it as latest
+	docker build --squash --build-arg WORKFLOW_DIR=$(WORKFLOW_DIR) --build-arg WORKFLOW_DEGREE=$(WORKFLOW_DEGREE) --build-arg NUMBER_OF_TASKS=$(NUMBER_OF_TASKS) -t $(DATA_LATEST) . # Build new image and automatically tag it as latest
 	docker tag $(DATA_LATEST) $(DATA_TAGED)  # Add the version tag to the latest image
 
 push-workflow-data: image-workflow-data

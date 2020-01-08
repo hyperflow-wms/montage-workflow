@@ -10,7 +10,7 @@ HyperFlow Docker image contains Montage binaries and HyperFlow job executor
 ## Running locally
 
 You can use three prepared zip packages with Montage workflow graphs and input data:
-- Montage 0.25 (43 tasks) ([16 MB](https://docs.google.com/uc?export=download&id=139Mia8gXX-LmjgnJlvSR6ndeaMXoFS7z))
+- Montage 0.25 (43 tasks) ([16 MB](https://docs.google.com/uc?export=download&id=1E4q4OkVXIwSSJ2bUs6g4thBUnPlMAqt2))
 - Montage 1.0 (469 tasks) ([146 MB](https://docs.google.com/uc?export=download&id=1fEX2vPVWJfjuVvmtQ-ZAQuBUL4GP18FS))
 - Montage 2.0 (1482 tasks) ([459 MB](https://docs.google.com/uc?export=download&id=1MUxIx-uDtHcXEMU39ixqfi8peWkw1OGy))
 

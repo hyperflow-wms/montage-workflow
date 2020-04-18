@@ -4,7 +4,7 @@ MAINTAINER Bartosz Balis <balis@agh.edu.pl>
 ENV HYPERFLOW_JOB_EXECUTOR_VERSION=v1.0.11
 
 # RUN apk add --no-cache make gcc g++ libnsl libnsl-dev
-RUN apk add python3 libpcap libpcap-dev
+RUN apk add python3 libpcap libpcap-dev util-linux
 
 #ADD http://pegasus.isi.edu/montage/Montage_v3.3_patched_4.tar.gz /
 #RUN tar zxvf Montage_v3.3_patched_4.tar.gz && \

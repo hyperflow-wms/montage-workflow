@@ -8,5 +8,5 @@ Download the workflow data from the link from the main README and unpack it.
 
 ```bash
 # WORKFLOW_DIR points to the directory with workflow data
-make push WROKFLOW_DEGREE=0.25 NUMBER_OF_TASKS=43 WORKFLOW_DIR=montage0.25
+make push WORKFLOW_DEGREE=0.25 NUMBER_OF_TASKS=43 WORKFLOW_DIR=montage0.25
 ```

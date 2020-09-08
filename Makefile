@@ -1,13 +1,16 @@
 TAG = $(shell git describe --tags --always)
-PREFIX = hyperflowwms
-REPO_NAME = montage-workflow-worker
+REPO_NAME='montage-worker'
+PREFIX='hyperflowwms'
+JOB_EXECUTOR_SHORT='je'
+HF_JOB_EXECUTOR_VERSION='1.1.0'
+TAG=$(JOB_EXECUTOR_SHORT)-$(HF_JOB_EXECUTOR_VERSION)
 
 all: push
 
 container: image
 
 image:
-	docker build -t $(PREFIX)/$(REPO_NAME) . # Build new image and automatically tag it as latest
+	docker build --build-arg hf_job_executor_version=$(HF_JOB_EXECUTOR_VERSION) -t $(PREFIX)/$(REPO_NAME) . # Build new image and automatically tag it as latest
 	docker tag $(PREFIX)/$(REPO_NAME) $(PREFIX)/$(REPO_NAME):$(TAG)  # Add the version tag to the latest image
 
 push: image

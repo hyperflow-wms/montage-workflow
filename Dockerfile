@@ -1,7 +1,10 @@
 FROM mhart/alpine-node:12
 MAINTAINER Bartosz Balis <balis@agh.edu.pl>
 
-ENV HYPERFLOW_JOB_EXECUTOR_VERSION=v1.0.11
+# Version of the job executor should be passed via docker build, e.g.: 
+# docker build --build-arg hf_job_executor_version="1.1.0""
+ARG hf_job_executor_version
+ENV HYPERFLOW_JOB_EXECUTOR_VERSION=$hf_job_executor_version
 
 # RUN apk add --no-cache make gcc g++ libnsl libnsl-dev
 RUN apk add python3 libpcap libpcap-dev util-linux
@@ -15,7 +18,7 @@ RUN apk add python3 libpcap libpcap-dev util-linux
 ADD software/Montage.tar.gz /
 ENV PATH $PATH:/Montage_v3.3_patched_4/bin
 
-RUN npm install -g https://github.com/hyperflow-wms/hyperflow-job-executor/archive/${HYPERFLOW_JOB_EXECUTOR_VERSION}.tar.gz
+RUN npm install -g @hyperflow/job-executor@${HYPERFLOW_JOB_EXECUTOR_VERSION}
 RUN npm install -g log4js
 
 COPY software/libnethogs.so.0.8.5-63-g68033bf /usr/local/lib

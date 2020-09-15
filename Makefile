@@ -2,7 +2,7 @@ TAG = $(shell git describe --tags --always)
 REPO_NAME='montage-worker'
 PREFIX='hyperflowwms'
 JOB_EXECUTOR_SHORT='je'
-HF_JOB_EXECUTOR_VERSION='1.1.0'
+HF_JOB_EXECUTOR_VERSION='1.1.1'
 TAG=$(JOB_EXECUTOR_SHORT)-$(HF_JOB_EXECUTOR_VERSION)
 
 all: push

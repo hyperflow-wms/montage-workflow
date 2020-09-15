@@ -1,4 +1,3 @@
-TAG = $(shell git describe --tags --always)
 REPO_NAME='montage-worker'
 PREFIX='hyperflowwms'
 JOB_EXECUTOR_SHORT='je'
